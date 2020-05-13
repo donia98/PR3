@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="916.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stdapp.TableViewPaneController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="562.0" prefWidth="919.0" spacing="15.0" style="-fx-background-color: eff3c6;">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+            <children>
+                <HBox alignment="CENTER" prefHeight="325.0" prefWidth="695.0" spacing="20.0">
+                    <children>
+                        <GridPane hgap="10.0" maxHeight="-Infinity" prefHeight="242.0" prefWidth="344.0">
+                            <columnConstraints>
+                                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="146.4000244140625" minWidth="10.0" prefWidth="146.4000244140625" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="115.9999755859375" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label text="Student ID:">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label text="student Name:" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Major:" GridPane.rowIndex="2">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Grade:" GridPane.rowIndex="3">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="stdID" GridPane.columnIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="stdName" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="stdMajor" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="stdGrade" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </GridPane>
+                        <TableView fx:id="tableView" prefHeight="336.0" prefWidth="451.0" style="-fx-font-size: 14px;">
+                            <columns>
+                                <TableColumn fx:id="tcID" minWidth="12.0" prefWidth="109.59991455078125" style="-fx-background-color: #c2f0fc;" text="ID" />
+                                <TableColumn fx:id="tcName" minWidth="12.0" prefWidth="124.79998779296875" style="-fx-background-color: #c2f0fc;" text="Name" />
+                                <TableColumn fx:id="tcMajor" minWidth="12.0" prefWidth="102.39996337890625" style="-fx-background-color: #c2f0fc;" text="Major" />
+                                <TableColumn fx:id="tcGrade" minWidth="12.0" prefWidth="117.5999755859375" style="-fx-background-color: #c2f0fc;" text="Grade" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                    <children>
+                        <Button fx:id="buttonShow" mnemonicParsing="false" onAction="#buttonShowHandle" prefHeight="30.0" prefWidth="90.0" text="Show" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                            <stylesheets>
+                                <URL value="@styles.css" />
+                                <URL value="@styles.css" />
+                            </stylesheets>
+                        </Button>
+                        <Button fx:id="buttonAddStd" mnemonicParsing="false" onAction="#buttonAddHandle" prefHeight="35.0" prefWidth="105.0" text="Add Student" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                            <stylesheets>
+                                <URL value="@styles.css" />
+                                <URL value="@styles.css" />
+                            </stylesheets>
+                        </Button>
+                        <Button fx:id="buttonUpdateStd" mnemonicParsing="false" onAction="#buttonUpdateHandle" prefHeight="35.0" prefWidth="105.0" text="Update" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                            <stylesheets>
+                                <URL value="@styles.css" />
+                                <URL value="@styles.css" />
+                            </stylesheets>
+                        </Button>
+                        <Button fx:id="buttonDeleteStd" mnemonicParsing="false" onAction="#buttonDeleteHandle" prefHeight="35.0" prefWidth="105.0" text="Delete" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                            <stylesheets>
+                                <URL value="@styles.css" />
+                                <URL value="@styles.css" />
+                            </stylesheets>
+                        </Button>
+                        <Button fx:id="buttonAddCourse" mnemonicParsing="false" onAction="#buttonDeleteHandle" prefHeight="35.0" prefWidth="105.0" text="Add Course" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                            <stylesheets>
+                                <URL value="@styles.css" />
+                                <URL value="@styles.css" />
+                            </stylesheets>
+                        </Button>
+                        <Button fx:id="buttonReset" mnemonicParsing="false" onAction="#buttonResetHandle" prefHeight="35.0" prefWidth="105.0" text="Reset" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                            <stylesheets>
+                                <URL value="@styles.css" />
+                                <URL value="@styles.css" />
+                            </stylesheets>
+                        </Button>
+                    </children>
+                    <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="20.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</FlowPane>
