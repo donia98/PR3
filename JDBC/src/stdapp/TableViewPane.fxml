@@ -80,10 +80,10 @@
                         </GridPane>
                         <TableView fx:id="tableView" prefHeight="336.0" prefWidth="451.0" style="-fx-font-size: 14px;">
                             <columns>
-                                <TableColumn fx:id="tcID" minWidth="12.0" prefWidth="109.59991455078125" style="-fx-background-color: #c2f0fc;" text="ID" />
-                                <TableColumn fx:id="tcName" minWidth="12.0" prefWidth="124.79998779296875" style="-fx-background-color: #c2f0fc;" text="Name" />
-                                <TableColumn fx:id="tcMajor" minWidth="12.0" prefWidth="102.39996337890625" style="-fx-background-color: #c2f0fc;" text="Major" />
-                                <TableColumn fx:id="tcGrade" minWidth="12.0" prefWidth="117.5999755859375" style="-fx-background-color: #c2f0fc;" text="Grade" />
+                                <TableColumn fx:id="tcID" minWidth="12.0" prefWidth="109.59991455078125" style="-fx-background-color: #c2f0fc;-fx-text-fill: black;-fx-font-size:18px;" text="ID" />
+                                <TableColumn fx:id="tcName" minWidth="12.0" prefWidth="124.79998779296875" style="-fx-background-color: #c2f0fc;-fx-text-fill: black;-fx-font-size:18px;" text="Name" />
+                                <TableColumn fx:id="tcMajor" minWidth="12.0" prefWidth="102.39996337890625" style="-fx-background-color: #c2f0fc;-fx-text-fill: black;-fx-font-size:18px;" text="Major" />
+                                <TableColumn fx:id="tcGrade" minWidth="12.0" prefWidth="117.5999755859375" style="-fx-background-color: #c2f0fc;-fx-text-fill: black;-fx-font-size:18px;" text="Grade" />
                             </columns>
                         </TableView>
                     </children>
